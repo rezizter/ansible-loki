@@ -1,12 +1,4 @@
 ---
-- name: Debug
-  debug:
-    msg: "{{ loki_install }}"
-
-- name: Debug
-  debug:
-    msg: "{{ __install_loki }}"
-
 - name: Check targets
   assert:
     that: __install_loki or __install_promtail
