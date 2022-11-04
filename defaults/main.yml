@@ -1,6 +1,7 @@
 ---
 loki_version: 2.6.1
 
+loki_install: false
 loki_config_directory: /etc/loki
 loki_config_auth: true
 loki_config_store: /var/lib/loki
@@ -14,6 +15,7 @@ loki_config_log_level: debug
 promtail_use_docker: false
 promtail_docker_image: "grafana/promtail:{{ loki_version }}"
 
+promtail_install: false
 promtail_config_directory: /etc/promtail
 promtail_config_log_level: info
 promtail_config_server_listen: 127.0.0.1
