@@ -31,4 +31,9 @@ scrape_configs:
     relabel_configs:
       - source_labels: ['__journal__systemd_unit']
         target_label: 'unit'
+{% if promtail_config_scrape_configs is defined %}
+{% for scrape_config in promtail_config_scrape_configs %}
+  - {{ scrape_config }}
+{% endfor %}
+{% endif %}
 {% endif %}

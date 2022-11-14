@@ -1,5 +1,5 @@
 ---
-loki_version: 2.1.0
+loki_version: 2.7.0
 
 loki_install: false
 loki_config_directory: /etc/loki
@@ -23,8 +23,8 @@ promtail_config_server_port: 9080
 promtail_config_client_loki_address: 127.0.0.1
 promtail_config_client_loki_port: 3100
 promtail_config_client_loki_path: /loki/api/v1/push
-promtail_config_client_tenant_id: luzilla
-promtail_config_client_set_tenant_id: true
+promtail_config_client_tenant_id: tenant1
+promtail_config_client_set_tenant_id: false
 promtail_config_client_external_labels:
     node: "{{ inventory_hostname }}"
 
