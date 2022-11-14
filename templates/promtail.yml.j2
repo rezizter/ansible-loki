@@ -33,7 +33,7 @@ scrape_configs:
         target_label: 'unit'
 {% if promtail_config_scrape_configs is defined %}
 {% for scrape_config in promtail_config_scrape_configs %}
-  - {{ scrape_config }}
+  - {{ scrape_config | to_yaml }}
 {% endfor %}
 {% endif %}
 {% endif %}
