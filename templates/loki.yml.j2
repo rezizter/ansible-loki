@@ -92,7 +92,7 @@ querier:
   extra_query_delay: 30s
   engine:
     timeout: 5m
-    max_look_back_period: 2m
+    max_look_back_period: {{ loki_config_period }}
   query_ingesters_within: 3h
 
 frontend:
