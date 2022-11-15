@@ -11,7 +11,7 @@ Restart=always
 RestartSec=10
 StandardOutput=journal
 StandardError=journal
-Environment=SYSTEMD_LOG_LEVEL=debug
+Environment=SYSTEMD_LOG_LEVEL=debug HOSTNAME={{ inventory_hostname }}
 
 [Install]
 WantedBy=multi-user.target

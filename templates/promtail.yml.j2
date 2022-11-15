@@ -17,9 +17,7 @@ clients:
     tenant_id: {{ promtail_config_client_tenant_id }}
 {% endif %}
     external_labels:
-{% for label_key in promtail_config_client_external_labels %}
-      {{ label_key }}: {{ promtail_config_client_external_labels[label_key] }}
-{% endfor %}
+      node: ${HOSTNAME}
 
 {% if __loki_go_os == 'linux' %}
 scrape_configs:

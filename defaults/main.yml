@@ -25,7 +25,5 @@ promtail_config_client_loki_port: 3100
 promtail_config_client_loki_path: /loki/api/v1/push
 promtail_config_client_tenant_id: tenant1
 promtail_config_client_set_tenant_id: false
-promtail_config_client_external_labels:
-    node: "{{ inventory_hostname }}"
 
 promtail_config_scrape_journald_path: /run/log/journal
