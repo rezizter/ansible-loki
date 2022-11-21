@@ -8,6 +8,7 @@ server:
   http_server_read_timeout: 600s
   http_server_write_timeout: 600s
   grpc_listen_address: 127.0.0.1
+  grpc_listen_port: {{ loki_config_grpc_port }}
   grpc_server_max_recv_msg_size: 20388078
   grpc_server_max_send_msg_size: 20388078
   log_level: {{ loki_config_log_level }}
