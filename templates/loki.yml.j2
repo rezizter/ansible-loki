@@ -82,7 +82,7 @@ ruler:
     local:
       directory: {{ loki_config_store }}/rules
   rule_path: {{ loki_config_store }}/rules-temp
-  alertmanager_url: http://localhost:9093
+  alertmanager_url: {{ loki_alertmanager_url }}
   ring:
     kvstore:
       store: inmemory
