@@ -12,6 +12,7 @@ loki_config_http_port: 3100
 loki_config_log_level: debug
 loki_config_grpc_port: 9096
 loki_alertmanager_url: http://localhost:9093
+loki_split_queries_by_interval: 24h
 
 # install a containerized promtail
 promtail_use_docker: false
