@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include rezizter.ansible-loki"
+    - name: "Include rezizter.ansible_loki"
       include_role:
-        name: "rezizter.ansible-loki"
+        name: "rezizter.ansible_loki"

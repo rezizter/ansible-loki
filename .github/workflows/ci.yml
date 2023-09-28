@@ -10,7 +10,7 @@ name: CI
 
 defaults:
   run:
-    working-directory: 'rezizter.ansible-loki'
+    working-directory: 'rezizter.ansible_loki'
 
 jobs:
 
@@ -21,7 +21,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v3
         with:
-          path: 'rezizter.ansible-loki'
+          path: 'rezizter.ansible_loki'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v3
@@ -48,7 +48,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v3
         with:
-          path: 'rezizter.ansible-loki'
+          path: 'rezizter.ansible_loki'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v3
