@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include rezizter.loki"
+      include_role:
+        name: "rezizter.loki"
