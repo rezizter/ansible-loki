@@ -4,20 +4,32 @@
 
 An Ansible role to install Grafana Loki and Promtail.
 
+# Credits
+This is a fork from:
+
+https://github.com/ashleykleynhans/ansible-loki
+
 ## Requirements
 
 For the standard (from binary) install of loki/promtail:
 
 - `unzip` on the hosts
 
-For the dockerized promtail:
-
-- Python: `docker==4.3.1`
-- `docker-cli`
-
 ## Role Variables
 
 See `defaults/main.yml` to customize this role.
+
+A basic configuration file is a follows:
+
+```bash
+vi inventories/host_vars/<YOUR SERVER/loki.yml
+```
+add:
+```yaml
+---
+loki_version: 2.9.1
+loki_install: true
+```
 
 ## Dependencies
 
@@ -43,7 +55,7 @@ And the playbook:
 ```yaml
 - hosts: all
   roles:
-    - role: hostwithquantum.loki
+    - role: rezizter.loki
 ```
 
 ## License
