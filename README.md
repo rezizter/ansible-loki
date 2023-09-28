@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/rezizter/ansible-loki/actions/workflows/ci.yml/badge.svg)](https://github.com/rezizter/ansible-loki/actions/workflows/ci.yml)
+[![Build Status](https://github.com/rezizter/ansible_loki/actions/workflows/ci.yml/badge.svg)](https://github.com/rezizter/ansible_loki/actions/workflows/ci.yml)
 
 # ansible-loki
 
@@ -55,7 +55,7 @@ And the playbook:
 ```yaml
 - hosts: all
   roles:
-    - role: rezizter.loki
+    - role: rezizter.ansible_loki
 ```
 
 ## License
