@@ -1,5 +1,5 @@
 galaxy_info:
-  role_name: loki
+  role_name: rezizter.ansible_loki
   description: Install Grafana Loki
   license: BSD-2-Clause
 
