@@ -7,7 +7,8 @@ platforms:
   - name: instance
     image: quay.io/centos/centos:stream8
     pre_build_image: true
-    command: /sbin/init
+    command: /usr/sbin/init
+    privileged: True
     capabilities:
       - SYS_ADMIN
     tmpfs:
