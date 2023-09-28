@@ -1,18 +1,67 @@
 ---
-on:
-  pull_request:
+name: CI
+#on: [push]
+'on':
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "30 8 * * 0"
 
-name: molecule
+defaults:
+  run:
+    working-directory: 'rezizter.ansible-loki'
 
 jobs:
-  molecule:
+
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Check out the codebase.
+        uses: actions/checkout@v3
         with:
-          path: "${{ github.repository }}"
-      - name: molecule test
-        uses: robertdebock/molecule-action@2.4.0
+          path: 'rezizter.ansible-loki'
+
+      - name: Set up Python 3.
+        uses: actions/setup-python@v3
         with:
-          image: centos
-          tag: 7
+          python-version: '3.x'
+
+      - name: Install test dependencies.
+        run: pip3 install yamllint
+
+      - name: Lint code.
+        run: |
+          yamllint .
+
+  molecule:
+    name: Molecule
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - distro: centos-8
+            playbook: converge.yml
+
+    steps:
+      - name: Check out the codebase.
+        uses: actions/checkout@v3
+        with:
+          path: 'rezizter.ansible-loki'
+
+      - name: Set up Python 3.
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install test dependencies.
+        run: pip3 install ansible molecule molecule-plugins[docker] docker
+
+      - name: Run Molecule tests.
+        run: molecule test
+        env:
+          PY_COLORS: '1'
+          ANSIBLE_FORCE_COLOR: '1'
+          MOLECULE_DISTRO: ${{ matrix.distro }}
+          MOLECULE_PLAYBOOK: ${{ matrix.playbook }}

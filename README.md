@@ -1,4 +1,4 @@
-![ansible-lint](https://github.com/hostwithquantum/ansible-loki/workflows/ansible-lint/badge.svg) ![flake8](https://github.com/hostwithquantum/ansible-loki/workflows/flake8/badge.svg) ![yaml-lint](https://github.com/hostwithquantum/ansible-loki/workflows/yaml-lint/badge.svg) ![molecule](https://github.com/hostwithquantum/ansible-loki/workflows/molecule/badge.svg)
+[![Build Status](https://github.com/rezizter/ansible-loki/actions/workflows/ci.yml/badge.svg)](https://github.com/rezizter/ansible-loki/actions/workflows/ci.yml)
 
 # ansible-loki
 
