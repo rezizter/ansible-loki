@@ -1,8 +1,6 @@
 galaxy_info:
   role_name: loki
-  author: Till Klampaeckel
   description: Install Grafana Loki
-  company: Planetary Quantum GmbH
   license: BSD-2-Clause
 
   min_ansible_version: 2.8
