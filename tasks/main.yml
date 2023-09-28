@@ -1,6 +1,14 @@
 ---
 - import_tasks: preflight.yml
 
+- name: fqdn | Configure Debian
+  include: debian.yml
+  when: ansible_os_family == 'Debian'
+
+- name: fqdn | Configure Redhat
+  include: redhat.yml
+  when: ansible_os_family == 'RedHat'
+
 - name: Install loki
   include_tasks: loki.yml
   when: __install_loki
