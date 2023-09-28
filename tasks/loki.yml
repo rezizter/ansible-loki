@@ -32,7 +32,6 @@
       get_url:
         url: "{{ __loki_download }}"
         dest: "/tmp/{{ __loki_archive }}"
-        checksum: "sha256:{{ __loki_download_github }}/v{{ loki_version }}/SHA256SUMS"
         mode: '0644'
       register: _download_release
       until: _download_release is succeeded
