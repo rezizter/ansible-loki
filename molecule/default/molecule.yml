@@ -6,7 +6,7 @@ driver:
 platforms:
   - name: instance
     #image: quay.io/centos/centos:stream9
-    image: rockylinux:9
+    image: eniocarboni/docker-rockylinux-systemd:latest
     command: /sbin/init
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro

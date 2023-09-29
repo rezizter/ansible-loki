@@ -3,7 +3,3 @@
   yum:
     name: unzip
     state: present
-- name: Redhat | Install init
-  yum:
-    name: initscripts
-    state: present
