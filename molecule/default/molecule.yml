@@ -6,7 +6,7 @@ driver:
 platforms:
   - name: instance
     #image: quay.io/centos/centos:stream8
-    image: centos/systemd
+    image: monolithprojects/systemd-centos8:latest
     pre_build_image: true
     command: /usr/sbin/init
     privileged: True
