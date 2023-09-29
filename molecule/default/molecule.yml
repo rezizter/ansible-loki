@@ -5,10 +5,9 @@ driver:
   name: docker
 platforms:
   - name: instance
-    #image: quay.io/centos/centos:stream8
-    image: monolithprojects/systemd-centos8:latest
+    image: quay.io/centos/centos:stream8
     pre_build_image: true
-    command: /usr/sbin/init
+    command: /sbin/init
     privileged: True
     capabilities:
       - SYS_ADMIN
