@@ -6,16 +6,11 @@ driver:
 platforms:
   - name: instance
     image: quay.io/centos/centos:stream8
-    pre_build_image: true
     command: /sbin/init
-    privileged: True
-    capabilities:
-      - SYS_ADMIN
-    tmpfs:
-      - /run
-      - /tmp
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: yes
+    pre_build_image: yes
 provisioner:
   name: ansible
 verifier:
