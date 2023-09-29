@@ -5,5 +5,5 @@
     state: present
 - name: Redhat | Install init
   yum:
-    name: init
+    name: initscripts
     state: present
