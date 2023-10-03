@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: dokken/centos-stream-9:latest
+    image: geerlingguy/docker-centos8-ansible:latest
     command: /sbin/init
     privileged: True
     tmpfs:
