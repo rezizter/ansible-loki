@@ -5,7 +5,7 @@ driver:
   name: docker
 platforms:
   - name: instance
-    image: centos9-stream
+    image: dokken/centos-stream-9
     command: /sbin/init
     tmpfs:
       - /run
