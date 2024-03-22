@@ -19,15 +19,15 @@
     - __install_loki
     - __loki_version is not defined
 
-#- name: "Preflight: promtail"
-#  include_tasks: preflight-promtail.yml
-#  when:
-#    - __install_promtail
-#    - __promtail_version is not defined
+- name: "Preflight: promtail"
+  include_tasks: preflight-promtail.yml
+  when:
+    - __install_promtail
+    - __promtail_version is not defined
 
-#- name: Empty promtail version
-#  set_fact:
-#    __promtail_version: ""
-#  when:
-#    - __install_promtail
-#    - not __promtail_stat.stat.exists
+- name: Empty promtail version
+  set_fact:
+    __promtail_version: ""
+  when:
+    - __install_promtail
+    - not __promtail_stat.stat.exists
