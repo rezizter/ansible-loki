@@ -36,7 +36,7 @@ jobs:
     strategy:
       matrix:
         include:
-          - distro: centos-8
+          - distro: almalinux-8
             playbook: converge.yml
 
     steps:
