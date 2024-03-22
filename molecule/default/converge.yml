@@ -6,5 +6,5 @@
     loki_install: true
   tasks:
     - name: "Include rezizter.ansible_loki"
-      include_role:
+      ansible.builtin.include_role:
         name: "rezizter.ansible_loki"
