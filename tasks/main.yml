@@ -1,5 +1,5 @@
 ---
-- import_tasks: preflight.yml
+#- import_tasks: preflight.yml
 
 - name: fqdn | Configure Debian
   include: debian.yml
