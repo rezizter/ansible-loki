@@ -22,7 +22,7 @@ See `defaults/main.yml` to customize this role.
 A basic configuration file is a follows:
 
 ```bash
-vi inventories/host_vars/<YOUR SERVER/loki.yml
+vi inventories/host_vars/<YOUR SERVER>/loki.yml
 ```
 add:
 ```yaml
@@ -61,7 +61,3 @@ And the playbook:
 ## License
 
 BSD-2-Clause
-
-## Author Information
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
